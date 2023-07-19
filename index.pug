@@ -1,0 +1,46 @@
+- navLinks = [{link: '#', name: 'Продукция'}, {link: '#', name: 'Материалы'}, {link: '#', name: 'О нас'}, {link: '#', name: 'Контакты'}]
+- yourVersions = [{path: '#', text: 'Первый вариант'}, {path: '#', text: 'Второй вариант'}, {path: '#', text: 'Третий вариант'}]
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Paper
+    body
+        .container
+            .header
+                img.logo(src="", alt="Sipmle")
+                .menu
+                    for obj in navLinks
+                        a.menu-link(href=obj.link)=obj.name 
+                    .search-and-account
+                        input#searchProduct(type="search", name="")
+                        button.account-btn
+            .title
+                h1.
+                    Простые вещи.#[br]
+                    Из бумаги
+                h1
+                span.subtitle Бума́га (предположительно от итал. bombagia, первоисточником же считается иранский) — волокнистый материал с минеральными добавками.
+                button.catalog
+                img.title-img(src="", alt="")
+            .description
+                .versions
+                    for obj, index in yourVersions
+                        .your-v
+                            img.your-v-img(src=obj.path, alt="")
+                            .your-v-text
+                                p='V.' + index
+                                spant=obj.text
+                .desc-main
+                    img.versions-img
+                    .desc-main-text
+                        h2 Максимальная белизна
+                        span Для повышения белизны, гладкости и мягкости в состав бумажной массы вводят белые минеральные вещества: мел, тальк, каолин и др. Эта операция называется наполнением.
+                        span Отлив бумажного листа осуществляют на бумагоделательной машине, важнейшей частью которой является непрерывно движущаяся (как транспортер) металлическая или капроновая сетка.
+            .cards
+            .partners
+            .example
+            .footer
